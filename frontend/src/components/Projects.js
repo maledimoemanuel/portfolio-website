@@ -37,7 +37,7 @@ function Projects() {
 
   useEffect(() => {
     axios
-      .get('http://localhost:5000/api/projects')
+      .get('https://maledimoemanuel-portfolio-backend.onrender.com/api/projects')
       .then((response) => {
         setProjects(response.data);
         setLoading(false);
