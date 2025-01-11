@@ -26,5 +26,5 @@ app.use("/api/projects", projectRoutes);
 app.use("/api/messages", messageRoutes);
 
 app.listen(PORT, () => {
-    console.log(`Server started at ${PORT}`);
+    console.log(`Server started at ${PORT}`)
 });
