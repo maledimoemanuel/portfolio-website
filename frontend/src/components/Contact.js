@@ -28,7 +28,7 @@ function Contact() {
     }
 
     try {
-      const response = await axios.post("http://localhost:5000/api/messages", formData);
+      const response = await axios.post("https://maledimoemanuel-portfolio-backend.onrender.com/api/messages", formData);
       if(response.data.success){
         alert("Thank you for contacting me! Your message has been sent");
         setFormData({ name: "", email: "", message: "" });
