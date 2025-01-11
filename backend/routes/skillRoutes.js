@@ -1,5 +1,5 @@
 const express = require("express");
-const Skill = require("../models/Skill");
+const Skill = require("../models/skill");
 
 const router = express.Router();
 
