@@ -1,27 +1,34 @@
-import React, {useState} from 'react';
-import {FaHome, FaInfo, FaTools,FaClipboardList, FaEnvelope} from 'react-icons/fa'
+import React from 'react';
+import { FaHome, FaUser, FaCode, FaProjectDiagram, FaEnvelope } from 'react-icons/fa';
 import { Link as ScrollLink } from 'react-scroll';
-import './style.css'
 
 function Navbar() {
-  const [activeComponent, setActiveComponent] = useState('hero');
-  
-
   return (
-    <nav className="bg-gradient-to-r from-blue-700 via-purple-800 to-pink-800 rounded-lg p-4 fixed bottom-5 flex justify-center md:w-auto animate-pulse">
-      <div className="container mx-auto">
-        <div className="flex space-x-4 md:items-center md:justify-between icons">
-            <ScrollLink to='hero' activeClass='active' spy={true} smooth={true} offset={-70} duration={500} onClick={() => setActiveComponent('hero')} className='icon' data-hover-text="Home"><FaHome className='mr-3'/></ScrollLink>
-            <ScrollLink to='about' activeClass='active' spy={true} smooth={true} offset={-70} duration={500} onClick={() => setActiveComponent('about')} className='icon' data-hover-text="About"><FaInfo className='mr-3'/></ScrollLink>
-            <ScrollLink to='skills' activeClass='active' spy={true} smooth={true} offset={-70} duration={500} onClick={() => setActiveComponent('skills')} className='icon' data-hover-text="Skills"><FaTools className='mr-3'/></ScrollLink>
-            <ScrollLink to='projects' activeClass='active' spy={true} smooth={true} offset={-70} duration={500} onClick={() => setActiveComponent('projects')} className='icon' data-hover-text="Projects"><FaClipboardList className='mr-3'/></ScrollLink>
-            <ScrollLink to='contact' activeClass='active' spy={true} smooth={true} offset={-70} duration={500} onClick={() => setActiveComponent('contact')} className='icon' data-hover-text="Contact"><FaEnvelope /></ScrollLink>
-        </div>
+    <nav className="fixed bottom-6 left-1/2 transform -translate-x-1/2 z-50">
+      <div className="flex items-center justify-center bg-white bg-opacity-80 backdrop-blur-sm rounded-full p-2 shadow-md">
+        <NavItem to="hero" icon={<FaHome size={18} />} text="Home" />
+        <NavItem to="about" icon={<FaUser size={18} />} text="About" />
+        <NavItem to="skills" icon={<FaCode size={18} />} text="Skills" />
+        <NavItem to="projects" icon={<FaProjectDiagram size={18} />} text="Work" />
+        <NavItem to="contact" icon={<FaEnvelope size={18} />} text="Contact" />
       </div>
     </nav>
   );
 }
 
-
+const NavItem = ({ to, icon, text }) => (
+  <ScrollLink
+    to={to}
+    spy={true}
+    smooth={true}
+    offset={-70}
+    duration={500}
+    activeClass="text-blue-600"
+    className="flex flex-col items-center px-4 py-2 text-gray-600 hover:text-blue-500 transition-colors cursor-pointer"
+  >
+    {icon}
+    <span className="text-xs mt-1">{text}</span>
+  </ScrollLink>
+);
 
 export default Navbar;
