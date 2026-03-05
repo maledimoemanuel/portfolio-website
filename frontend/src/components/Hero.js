@@ -1,11 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom'; 
 import { Link as ScrollLink } from 'react-scroll'; 
-import { FaGithub, FaLinkedin, FaEnvelope, FaPhone, FaFileAlt, FaArrowRight } from 'react-icons/fa';
+import { FaGithub, FaLinkedin, FaEnvelope, FaPhone, FaArrowRight } from 'react-icons/fa';
 import { motion } from 'framer-motion';
 import Navbar from './Navbar';
 import './style.css';
-import heroImage from '../assets/hero.svg';
 
 function Hero() {
   const [isLoaded, setIsLoaded] = useState(false);
@@ -50,20 +49,28 @@ function Hero() {
         >
           <Link
             to="/"
-            className="text-3xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-indigo-500"
+            aria-label="Noah home"
+            className="inline-flex items-center justify-center h-10 w-10 rounded-lg border border-gray-300 bg-white shadow-sm hover:shadow-md transition-shadow"
           >
-            N.
-          </Link>
-          <Link
-            to="https://yellow-cory-85.tiiny.site"
-            target="_blank"
-            className="flex items-center gap-2 px-5 py-2.5 rounded-lg bg-gradient-to-r from-blue-600 to-indigo-500 text-white hover:from-blue-700 hover:to-indigo-600 transition-all shadow-md hover:shadow-lg group"
-          >
-            <FaFileAlt className="text-sm" />
-            <span>View CV</span>
-            <FaArrowRight className="text-xs opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all" />
+            <span className="text-xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-indigo-500">
+              N
+            </span>
           </Link>
         </motion.div>
+
+        {/* Hero Title - full width */}
+        <motion.h1
+          className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight mb-10"
+          initial={{ opacity: 0, y: 20 }}
+          animate={isLoaded ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+          transition={{ duration: 0.5, ease: "easeOut" }}
+        >
+          I build{" "}
+          <span className="bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-indigo-500">
+            production systems
+          </span>{" "}
+          that solve real operational problems.
+        </motion.h1>
 
         {/* Main Content */}
         <div className="flex flex-col lg:flex-row items-center justify-between gap-12">
@@ -74,34 +81,24 @@ function Hero() {
             animate={isLoaded ? "visible" : "hidden"}
             variants={containerVariants}
           >
-            <motion.p
-              className="text-lg font-medium text-gray-500 mb-4"
-              variants={itemVariants}
-            >
-              Hey there, I'm Maledimo Emanuel 👋🏾
-            </motion.p>
-
-            <motion.h1
-              className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight mb-6"
-              variants={itemVariants}
-            >
-              But please, call me <span className="bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-indigo-500">Noah</span>
-            </motion.h1>
-
             <motion.h2
-              className="text-2xl md:text-3xl font-medium text-gray-700 mb-8"
+              className="text-xl md:text-2xl font-medium text-gray-600 mb-6"
               variants={itemVariants}
             >
-              I craft <span className="text-blue-600">digital experiences</span> from backend to UI
+              Full-stack software developer focused on backend architecture, scalable APIs, real-time systems, and clean, usable interfaces.
             </motion.h2>
 
-            <motion.p
-              className="text-lg text-gray-600 leading-relaxed mb-10 max-w-lg"
+            <motion.div
+              className="text-lg text-gray-600 leading-relaxed mb-10 max-w-lg space-y-4"
               variants={itemVariants}
             >
-              I'm a Software Developer with a sharp eye for impactful design, clean code, and real-world solutions.
-              Let's build something powerful together.
-            </motion.p>
+              <p>
+                I design and build software that businesses rely on - APIs, dashboards, and mobile applications that support live operations, payments, and data-driven decision-making.
+              </p>
+              <p>
+                Currently working remotely with international clients, shipping systems that handle real users, real transactions, and real constraints.
+              </p>
+            </motion.div>
 
             <motion.div
               className="flex flex-col sm:flex-row gap-4 mb-12"
@@ -158,13 +155,28 @@ function Hero() {
           </motion.div>
 
           {/* Right Content */}
-          <motion.div
-            className="lg:w-1/2 flex justify-center"
-            initial={{ opacity: 0, scale: 0.9 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.8, ease: "easeOut" }}
-          >
-          </motion.div>
+          <div className="lg:w-1/2 flex justify-center">
+            <div className="w-full max-w-sm">
+              <div className="bg-white border border-gray-200 rounded-xl shadow-sm p-6">
+                <p className="text-[11px] font-semibold text-blue-600 uppercase tracking-[0.2em] mb-4">
+                  System overview
+                </p>
+                <div className="space-y-2 text-sm text-gray-800 font-mono">
+                  <p>Client Apps</p>
+                  <p className="text-gray-400 text-xs">↓</p>
+                  <p>Web &amp; Mobile Interfaces</p>
+                  <p className="text-gray-400 text-xs">↓</p>
+                  <p>REST APIs / SignalR</p>
+                  <p className="text-gray-400 text-xs">↓</p>
+                  <p>Core Services &amp; Business Logic</p>
+                  <p className="text-gray-400 text-xs">↓</p>
+                  <p>SQL Server / Optimization Engine</p>
+                  <p className="text-gray-400 text-xs">↓</p>
+                  <p>Payments • Maps • Messaging</p>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
 

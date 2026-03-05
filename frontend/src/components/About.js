@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { FaCode, FaServer, FaMobile, FaBrain } from 'react-icons/fa';
-import profilePhoto from '../assets/me.jpg'; 
+import profilePhoto from '../assets/Me.PNG'; 
 
 const About = () => {
   return (
@@ -46,11 +46,11 @@ const About = () => {
             viewport={{ once: true }}
           >
             <p className="text-xl text-gray-700 mb-8 leading-relaxed">
-              I'm a Software Developer with a background in Mathematics and Computer Science, building clean, scalable digital experiences that solve real-world problems.
+              I'm Maledimo Emanuel, but most people call me Noah. I'm a Software Developer with a background in Mathematics and Computer Science, focused on building production-ready systems that solve operational problems - from logistics and communication platforms to internal tools used by real teams.
             </p>
 
             <p className="text-gray-600 mb-6 leading-relaxed">
-              My journey began while studying Mathematics & Computer Science, where I discovered the power of code to create meaningful solutions. Since then, I've built web and mobile applications for startups, non-profits, and printing companies,turning abstract ideas into tangible, working tools.
+              I've worked on web and mobile applications for startups, non-profits, and operational businesses, translating complex requirements into reliable, maintainable software.
             </p>
 
             <div className="grid md:grid-cols-2 gap-6 mb-8">
@@ -59,8 +59,8 @@ const About = () => {
                   <FaCode className="text-xl" />
                 </div>
                 <div>
-                  <h4 className="font-semibold text-gray-800 mb-1">Full-Stack Focus</h4>
-                  <p className="text-gray-600 text-sm">From backend architecture to pixel-perfect UIs</p>
+                  <h4 className="font-semibold text-gray-800 mb-1">Full-stack delivery</h4>
+                  <p className="text-gray-600 text-sm">I design APIs, data models, and frontends that work together cleanly.</p>
                 </div>
               </div>
               <div className="flex items-start gap-4">
@@ -68,8 +68,8 @@ const About = () => {
                   <FaServer className="text-xl" />
                 </div>
                 <div>
-                  <h4 className="font-semibold text-gray-800 mb-1">Clean Code</h4>
-                  <p className="text-gray-600 text-sm">Scalable, maintainable, and well-documented</p>
+                  <h4 className="font-semibold text-gray-800 mb-1">Production-minded</h4>
+                  <p className="text-gray-600 text-sm">I write code that's maintainable, documented, and built to survive real usage.</p>
                 </div>
               </div>
               <div className="flex items-start gap-4">
@@ -77,8 +77,8 @@ const About = () => {
                   <FaMobile className="text-xl" />
                 </div>
                 <div>
-                  <h4 className="font-semibold text-gray-800 mb-1">User-Centric</h4>
-                  <p className="text-gray-600 text-sm">Design that feels intuitive and delightful</p>
+                  <h4 className="font-semibold text-gray-800 mb-1">User-driven</h4>
+                  <p className="text-gray-600 text-sm">I prioritise usability and clarity over flashy UI.</p>
                 </div>
               </div>
               <div className="flex items-start gap-4">
@@ -86,14 +86,15 @@ const About = () => {
                   <FaBrain className="text-xl" />
                 </div>
                 <div>
-                  <h4 className="font-semibold text-gray-800 mb-1">Problem Solver</h4>
-                  <p className="text-gray-600 text-sm">Focused on the actual need behind the project</p>
+                  <h4 className="font-semibold text-gray-800 mb-1">Problem-first</h4>
+                  <p className="text-gray-600 text-sm">I focus on solving the underlying business problem, not just "building features".</p>
                 </div>
               </div>
             </div>
 
             <p className="text-gray-600 mb-6 leading-relaxed">
-              Currently, I work remotely as a Software Developer at BIGSMS in Melbourne, Australia, where I build communication solutions that help businesses connect with their customers. On the side, I'm developing Resafe, a mobile app designed to combat gender-based violence in South Africa through technology.
+              I currently work remotely as a Software Developer at BIGSMS (Melbourne, Australia), where I build communication platforms used by businesses to engage customers at scale.
+              Alongside my professional work, I'm building <em>Resafe</em>, a mobile app aimed at tackling gender-based violence in South Africa through technology-driven reporting and awareness.
             </p>
 
             <div className="border-l-4 border-blue-500 pl-4">
