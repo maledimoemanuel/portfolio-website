@@ -297,7 +297,7 @@ const Contact = () => {
                       <FaGithub className="text-xl" />
                     </a>
                     <a 
-                      href="https://linkedin.com/in/emanuel-maledimo-13770b200" 
+                      href="https://www.linkedin.com/in/emanuel-%E2%80%9Cnoah%E2%80%9D-maledimo-13770b200/" 
                       target="_blank" 
                       rel="noopener noreferrer"
                       className="p-3 bg-gray-100 rounded-lg text-gray-700 hover:bg-blue-100 hover:text-blue-600 transition-all"

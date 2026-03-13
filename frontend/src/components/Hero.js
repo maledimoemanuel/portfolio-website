@@ -136,7 +136,7 @@ function Hero() {
                   <FaGithub className="text-xl" />
                 </div>
               </a>
-              <a href="https://linkedin.com/in/emanuel-maledimo-13770b200" target="_blank" rel="noopener noreferrer" className="social-icon">
+              <a href="https://www.linkedin.com/in/emanuel-%E2%80%9Cnoah%E2%80%9D-maledimo-13770b200/" target="_blank" rel="noopener noreferrer" className="social-icon">
                 <div className="w-12 h-12 rounded-full bg-white shadow-md flex items-center justify-center text-gray-700 hover:text-blue-600 hover:shadow-lg transition-all">
                   <FaLinkedin className="text-xl" />
                 </div>
